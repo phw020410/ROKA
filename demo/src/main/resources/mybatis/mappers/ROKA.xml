@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0/EN"
+    "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.model.dao.ROKAMapper">
+    <select id="getAllData" resultType="ROKA">
+        select * from army_data;
+    </select>
+
+    <select id="getUser" resultType="ROKA">
+        select * from army_data where seq=#{seq};
+    </select>
+
+    <insert id="addUser">
+        insert into army_data value(#{roka.userName}, #{roka.inDate}, #{roka.outDate}, #{roka.rank}, #{seq});
+    </insert>
+</mapper>

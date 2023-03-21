@@ -1,0 +1,35 @@
+{{>layouts/header}}
+<body>
+    <div>
+        <div id="current-time">
+            <p>현재시간</p>
+            <p>0000년 00월 00일 00:00:00</p>
+        </div>
+        
+        <div>
+            {{#army}}
+            <div id="name">
+                <p>관등 성명 : {{rank}} {{userName}}</p>
+            </div>
+
+            <div id="in-date">
+                <p>입대 날</p>
+                <p>{{inDate}}</p>
+            </div>
+
+            <div id="out-date">
+                <p>전역 날</p>
+                <p>{{outDate}}</p>
+            </div>
+
+            <div id="remain-day">
+                <p>남은 날</p>
+                <p></p>
+            </div>
+            {{/army}}
+        </div>
+    </div>
+    <script src="js/currentTime.js"></script>
+    <script type="module" src="js/remainTime.js"></script>
+</body>
+{{>layouts/footer}}
