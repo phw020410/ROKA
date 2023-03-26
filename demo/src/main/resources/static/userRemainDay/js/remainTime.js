@@ -15,4 +15,6 @@ function getRemainTime() {
     remainDate.getElementsByTagName('p')[1].textContent = time;
 }
 
-setInterval(getRemainTime, 1000);
+if(new Date(outDate.textContent) != new Date()) {
+    setInterval(getRemainTime, 1000);
+}

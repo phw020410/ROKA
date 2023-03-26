@@ -10,6 +10,7 @@
         <thead>
             <tr>
                 <th>이름</th>
+                <th>시퀀스</th>
             </tr>
         </thead>
 
@@ -17,7 +18,10 @@
             {{#all_user}}
             <tr>
                 <td>
-                    {{userName}}, {{seq}}
+                    <a href="/userRemainDay/{{seq}}">{{userName}}</a>
+                </td>
+                <td>
+                    {{seq}}
                 </td>
             </tr>
             {{/all_user}}
